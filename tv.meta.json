@@ -1,0 +1,12 @@
+{
+  "record_size": 6,
+  "index_entry_size": 12,
+  "index_spacing": 500,
+  "tmdb_bytes": 3,
+  "watchmode_bytes": 3,
+  "total_records": 71570,
+  "files": {
+    "bin": "tv.bin",
+    "index": "tv.index"
+  }
+}
