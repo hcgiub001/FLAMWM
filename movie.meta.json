@@ -1,0 +1,12 @@
+{
+  "index_spacing": 500,
+  "index_entry_size": 12,
+  "tmdb_varint": true,
+  "watchmode_bytes": 3,
+  "total_records": 881561,
+  "files": {
+    "bin": "movie.bin",
+    "index": "movie.index"
+  },
+  "version": 1
+}
