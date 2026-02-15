@@ -3,7 +3,7 @@ name: Build & Release Watchmode Bundles
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'    # daily at 03:00 UTC (adjust as wanted)
+    - cron: '0 3 * * *'    # daily at 03:00 UTC
 
 permissions:
   contents: write
@@ -42,37 +42,13 @@ jobs:
 
       - name: Create combined archive of out/
         run: |
-          tar -czf bundles-${GITHUB_RUN_ID}.tar.gz -C out .
-
-      - name: Read manifest and set outputs
-        id: manifest
-        run: |
-          # Try to read out/latest.json -> .version; fallback to run id
-          if [ -f out/latest.json ]; then
-            VERSION=$(python - <<'PY'
-import json,sys
-try:
-    j=json.load(open('out/latest.json'))
-    print(j.get('version',''))
-except Exception:
-    sys.exit(0)
-PY
-)
-          else
-            VERSION=""
-          fi
-          if [ -z "$VERSION" ]; then
-            VERSION=${GITHUB_RUN_ID}
-          fi
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "manifest=out/latest.json" >> $GITHUB_OUTPUT
-          echo "Manifest version: $VERSION"
+          tar -czf bundles-${{ github.run_id }}.tar.gz -C out .
 
       - name: Create GitHub Release and upload assets
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.manifest.outputs.version }}
-          name: "Bundles ${{ steps.manifest.outputs.version }}"
+          tag_name: ${{ github.run_id }}
+          name: "Bundles ${{ github.run_id }}"
           body: "Automated build of mapping bundles."
           files: bundles-${{ github.run_id }}.tar.gz,out/latest.json
         env:
