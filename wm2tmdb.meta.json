@@ -1,0 +1,23 @@
+{
+  "index_spacing": 100,
+  "index_entry_size": 8,
+  "tmdb_packed_bits": 1,
+  "total_records": 1032581,
+  "max_watchmode": 11089400,
+  "max_tmdb": 1616717,
+  "compression": "zlib",
+  "block_header_size": 8,
+  "block_stats": {
+    "num_blocks": 10326,
+    "uncompressed_bytes_total": 4475055,
+    "compressed_bytes_total": 3144129,
+    "compressed_mean": 304,
+    "compressed_median": 308,
+    "compressed_min": 178,
+    "compressed_max": 433
+  },
+  "files": {
+    "bin": "wm2tmdb.bin",
+    "index": "wm2tmdb.index"
+  }
+}
