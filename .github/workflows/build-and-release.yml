@@ -43,25 +43,24 @@ jobs:
       - name: Read manifest and set outputs
         id: manifest
         run: |
-          # read version from out/latest.json and write to GITHUB_OUTPUT for later steps
-          python - <<'PY' > /tmp/manifest_info.txt
-import json, pathlib, sys
-p = pathlib.Path('out/latest.json')
-if not p.exists():
-    print("error: out/latest.json not found", file=sys.stderr)
-    sys.exit(2)
-j = json.load(p.open())
-version = str(j.get('version','')).strip()
-if not version:
-    print("error: version not found in out/latest.json", file=sys.stderr)
-    sys.exit(2)
-print("version=" + version)
-print("manifest=" + str(p))
+          # Read version from out/latest.json and export it for later steps.
+          if [ ! -f out/latest.json ]; then
+            echo "ERROR: out/latest.json not found" >&2
+            exit 1
+          fi
+          version=$(python - <<'PY'
+import json,sys,pathlib
+p=pathlib.Path('out/latest.json')
+j=json.load(p.open())
+v=j.get('version','')
+print(v)
 PY
-          # write outputs for GitHub Actions
-          grep -E '^(version|manifest)=' /tmp/manifest_info.txt | while IFS='=' read -r name val; do
-            echo "$name=$val" >> $GITHUB_OUTPUT
-          done
+)
+          if [ -z "$version" ]; then
+            echo "ERROR: version missing in out/latest.json" >&2
+            exit 1
+          fi
+          echo "version=$version" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         id: release
