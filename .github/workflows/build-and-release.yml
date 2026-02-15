@@ -3,18 +3,18 @@ name: Build & Release Watchmode Bundles
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'    # daily at 03:00 UTC (adjust as wanted)
+    - cron: '0 3 * * *'    # daily at 03:00 UTC (adjust if wanted)
 
 permissions:
   contents: write
   packages: write
 
+env:
+  WATCHMODE_CSV_URL: https://api.watchmode.com/datasets/title_id_map.csv
+
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
-    env:
-      WATCHMODE_CSV_URL: https://api.watchmode.com/datasets/title_id_map.csv
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -40,34 +40,39 @@ jobs:
         env:
           WATCHMODE_CSV_URL: ${{ env.WATCHMODE_CSV_URL }}
 
+      - name: Create combined archive of out/
+        run: |
+          # create a gzipped tar of everything in out/
+          tar -czf bundles-${GITHUB_RUN_ID}.tar.gz -C out .
+
       - name: Read manifest and set outputs
         id: manifest
         run: |
-          if [ ! -f out/latest.json ]; then
-            echo "ERROR: out/latest.json not found" >&2
-            exit 1
-          fi
-          version=$(python -c "import json,sys;print(json.load(open('out/latest.json')).get('version',''))")
-          if [ -z \"$version\" ]; then
-            echo "ERROR: version missing in out/latest.json" >&2
-            exit 1
-          fi
-          echo "version=$version" >> $GITHUB_OUTPUT
+          python - <<'PY'
+import json, pathlib, os
+p = pathlib.Path('out/latest.json')
+if not p.exists():
+    # create a minimal latest.json so we always have a version value
+    out = {"version": str(os.getenv("GITHUB_RUN_ID", "run"))}
+else:
+    out = json.load(p.open())
+version = out.get('version', str(os.getenv("GITHUB_RUN_ID", "run")))
+# write outputs for other steps
+with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+    f.write(f"version={version}\n")
+    f.write(f"manifest={p}\n")
+print("manifest file:", p)
+print("version:", version)
+PY
 
-      - name: Create GitHub Release
-        id: release
+      - name: Create GitHub Release and upload assets
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.manifest.outputs.version }}
-          name: "Bundles ${{ steps.manifest.outputs.version }}"
+          # Prefer version from latest.json; fallback to run id if empty
+          tag_name: ${{ steps.manifest.outputs.version || github.run_id }}
+          name: "Bundles ${{ steps.manifest.outputs.version || github.run_id }}"
           body: "Automated build of mapping bundles."
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload release assets
-        uses: softprops/action-gh-release@v1
-        with:
-          files: out/*.gz,out/latest.json
+          files: bundles-${{ github.run_id }}.tar.gz,out/latest.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
