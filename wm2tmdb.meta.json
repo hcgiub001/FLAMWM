@@ -2,7 +2,7 @@
   "count": 1032581,
   "key_bytes": 4,
   "value_bytes": 4,
-  "key_endian": "big",
+  "key_endian": "little",
   "value_endian": "little",
   "sample_stride": 64,
   "key_name": "wm2tmdb",
