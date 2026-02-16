@@ -1,0 +1,10 @@
+spacing,index_entries,index_size_bytes,bin_size_bytes,index_path,bin_path,meta_path
+4,258146,2065168,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s4.index,C:\Users\Sufff\Downloads\wm2tmdb.s4.bin,C:\Users\Sufff\Downloads\wm2tmdb.s4.meta.json
+8,129073,1032584,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s8.index,C:\Users\Sufff\Downloads\wm2tmdb.s8.bin,C:\Users\Sufff\Downloads\wm2tmdb.s8.meta.json
+16,64537,516296,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s16.index,C:\Users\Sufff\Downloads\wm2tmdb.s16.bin,C:\Users\Sufff\Downloads\wm2tmdb.s16.meta.json
+32,32269,258152,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s32.index,C:\Users\Sufff\Downloads\wm2tmdb.s32.bin,C:\Users\Sufff\Downloads\wm2tmdb.s32.meta.json
+50,20652,165216,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s50.index,C:\Users\Sufff\Downloads\wm2tmdb.s50.bin,C:\Users\Sufff\Downloads\wm2tmdb.s50.meta.json
+100,10326,82608,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s100.index,C:\Users\Sufff\Downloads\wm2tmdb.s100.bin,C:\Users\Sufff\Downloads\wm2tmdb.s100.meta.json
+150,6884,55072,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s150.index,C:\Users\Sufff\Downloads\wm2tmdb.s150.bin,C:\Users\Sufff\Downloads\wm2tmdb.s150.meta.json
+250,4131,33048,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s250.index,C:\Users\Sufff\Downloads\wm2tmdb.s250.bin,C:\Users\Sufff\Downloads\wm2tmdb.s250.meta.json
+500,2066,16528,4475063,C:\Users\Sufff\Downloads\wm2tmdb.s500.index,C:\Users\Sufff\Downloads\wm2tmdb.s500.bin,C:\Users\Sufff\Downloads\wm2tmdb.s500.meta.json

@@ -1,0 +1,85 @@
+{
+  "spacings": [
+    {
+      "spacing": 4,
+      "index_entries": 258146,
+      "index_size_bytes": 2065168,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s4.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s4.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s4.meta.json"
+    },
+    {
+      "spacing": 8,
+      "index_entries": 129073,
+      "index_size_bytes": 1032584,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s8.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s8.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s8.meta.json"
+    },
+    {
+      "spacing": 16,
+      "index_entries": 64537,
+      "index_size_bytes": 516296,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s16.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s16.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s16.meta.json"
+    },
+    {
+      "spacing": 32,
+      "index_entries": 32269,
+      "index_size_bytes": 258152,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s32.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s32.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s32.meta.json"
+    },
+    {
+      "spacing": 50,
+      "index_entries": 20652,
+      "index_size_bytes": 165216,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s50.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s50.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s50.meta.json"
+    },
+    {
+      "spacing": 100,
+      "index_entries": 10326,
+      "index_size_bytes": 82608,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s100.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s100.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s100.meta.json"
+    },
+    {
+      "spacing": 150,
+      "index_entries": 6884,
+      "index_size_bytes": 55072,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s150.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s150.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s150.meta.json"
+    },
+    {
+      "spacing": 250,
+      "index_entries": 4131,
+      "index_size_bytes": 33048,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s250.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s250.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s250.meta.json"
+    },
+    {
+      "spacing": 500,
+      "index_entries": 2066,
+      "index_size_bytes": 16528,
+      "bin_size_bytes": 4475063,
+      "index_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s500.index",
+      "bin_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s500.bin",
+      "meta_path": "C:\\Users\\Sufff\\Downloads\\wm2tmdb.s500.meta.json"
+    }
+  ]
+}
