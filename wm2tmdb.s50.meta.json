@@ -1,0 +1,14 @@
+{
+  "index_spacing": 50,
+  "index_entry_size": 8,
+  "tmdb_packed_bits": 1,
+  "total_records": 1032581,
+  "max_watchmode": 11089400,
+  "files": {
+    "bin": "wm2tmdb.s50.bin",
+    "index": "wm2tmdb.s50.index"
+  },
+  "index_entries": 20652,
+  "index_size_bytes": 165216,
+  "bin_size_bytes": 4475063
+}
