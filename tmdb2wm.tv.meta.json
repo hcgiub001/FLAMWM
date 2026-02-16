@@ -1,0 +1,15 @@
+{
+  "count": 151020,
+  "key_bytes": 3,
+  "value_bytes": 3,
+  "key_endian": "big",
+  "value_endian": "little",
+  "sample_stride": 64,
+  "key_name": "tmdb2wm.tv",
+  "value_name": "watchmode.tv",
+  "files": {
+    "keys": "tmdb2wm.tv.tmdb2wm.tv.keys.bin",
+    "values": "tmdb2wm.tv.watchmode.tv.values.bin",
+    "sample": "tmdb2wm.tv.sample.u32"
+  }
+}

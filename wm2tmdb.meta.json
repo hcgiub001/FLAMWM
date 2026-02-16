@@ -1,12 +1,15 @@
 {
-  "index_spacing": 8,
-  "index_entry_size": 8,
-  "tmdb_packed_bits": 1,
-  "total_records": 1032581,
-  "max_watchmode": 11089400,
-  "max_tmdb": 1616717,
+  "count": 1032581,
+  "key_bytes": 3,
+  "value_bytes": 3,
+  "key_endian": "big",
+  "value_endian": "little",
+  "sample_stride": 64,
+  "key_name": "wm2tmdb",
+  "value_name": "packed_tmdb",
   "files": {
-    "bin": "wm2tmdb.bin",
-    "index": "wm2tmdb.index"
+    "keys": "wm2tmdb.wm2tmdb.keys.bin",
+    "values": "wm2tmdb.packed_tmdb.values.bin",
+    "sample": "wm2tmdb.sample.u32"
   }
 }
