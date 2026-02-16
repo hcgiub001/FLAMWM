@@ -1,7 +1,7 @@
 {
   "count": 881561,
-  "key_bytes": 3,
-  "value_bytes": 3,
+  "key_bytes": 4,
+  "value_bytes": 4,
   "key_endian": "big",
   "value_endian": "little",
   "sample_stride": 64,
