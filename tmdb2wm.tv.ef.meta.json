@@ -1,0 +1,22 @@
+{
+  "n": 151020,
+  "L": 2,
+  "low_bits_len_bits": 302040,
+  "low_bytes": 37755,
+  "high_bits_len_bits": 306541,
+  "high_bytes": 38318,
+  "ef_aux": {
+    "superblock_bits": 2048,
+    "block_bits": 64,
+    "num_superblocks": 150,
+    "num_blocks": 4790,
+    "per_block_bytes": 2
+  },
+  "files": {
+    "low": "tmdb2wm.tv.ef.low",
+    "high": "tmdb2wm.tv.ef.high",
+    "super": "tmdb2wm.tv.ef.super.u32",
+    "blocks": "tmdb2wm.tv.ef.blocks.u16",
+    "sample": "tmdb2wm.tv.sample.u32"
+  }
+}
