@@ -12,11 +12,13 @@
     "num_blocks": 37794,
     "per_block_bytes": 2
   },
+  "sample_stride": 64,
   "files": {
     "low": "wm2tmdb.ef.low",
     "high": "wm2tmdb.ef.high",
     "super": "wm2tmdb.ef.super.u32",
     "blocks": "wm2tmdb.ef.blocks.u16",
-    "sample": "wm2tmdb.sample.u32"
+    "sample": "wm2tmdb.sample.u32",
+    "values": "wm2tmdb.values.u32"
   }
 }
