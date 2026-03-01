@@ -1,0 +1,15 @@
+{
+  "count": 1032581,
+  "key_bytes": 4,
+  "value_bytes": 4,
+  "key_endian": "little",
+  "value_endian": "little",
+  "sample_stride": 64,
+  "key_name": "wm2tmdb",
+  "value_name": "packed_tmdb",
+  "files": {
+    "keys": "wm2tmdb.wm2tmdb.keys.bin",
+    "values": "wm2tmdb.packed_tmdb.values.bin",
+    "sample": "wm2tmdb.sample.u32"
+  }
+}
